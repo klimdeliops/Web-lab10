@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Construct</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="header.css" />
+    <style>
+      body {
+        font-family: "Montserrat", Arial, sans-serif;
+        background: #f7f7f8;
+        color: #222;
+      }
+      .brand-orange {
+
+        color: #ff7c01;
+      }
+      .brand-green {
+        padding-top: 80px;
+        color: #33ba56;
+      }
+      .brand-accent-bg {
+        background: #fff3ea;
+      }
+      .hero-bg {
+        background: linear-gradient(120deg, #fff3ea 70%, #49e68728 100%);
+        border-radius: 0 0 32px 32px;
+        box-shadow: 0 4px 48px 0 rgba(255, 129, 1, 0.06);
+      }
+      .card,
+      .feature-card {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 6px 40px 0 rgba(44, 44, 72, 0.09);
+        transition: transform 0.13s cubic-bezier(0.38, 1.14, 0.86, 1.05);
+      }
+      .feature-card:hover {
+        transform: translateY(-3px) scale(1.025);
+      }
+      .cta-section {
+        background: linear-gradient(90deg, #fff3ea 60%, #dbeffd 100%);
+        border-radius: 24px;
+        box-shadow: 0 8px 40px 0 rgba(255, 124, 1, 0.07);
+      }
+      .btn-orange {
+        background: #ff7c01;
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        transition: background 0.19s;
+        border-radius: 12px;
+        padding: 14px 32px;
+        font-size: 1.15rem;
+        box-shadow: 0 2px 14px 0 #ff930050;
+      }
+      .btn-orange:hover {
+        background: #ff9500;
+        color: #fff;
+      }
+      .features-icon {
+        width: 66px;
+        height: 66px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 32px #ffe7d1ba;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+        font-size: 2.1rem;
+      }
+      .contact-section {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 8px 40px 0 rgba(44, 44, 72, 0.06);
+        margin-top: 48px;
+        padding: 32px 18px;
+      }
+      .footer {
+        background: #000;
+        color: #fff;
+        padding: 32px 0;
+        margin-top: 50px;
+      }
+      /* Mobile + tablet адаптив */
+      @media (max-width: 991px) {
+        .cta-section {
+          padding: 2rem 1rem !important;
+        }
+        .contact-section {
+          margin-top: 32px;
+          padding: 22px 6px;
+        }
+        .footer {
+          margin-top: 32px;
+        }
+      }
+      @media (max-width: 540px) {
+        .feature-card {
+          margin-bottom: 14px;
+        }
+        .hero-bg {
+          border-radius: 0 0 20px 20px;
+        }
+        .cta-section,
+        .contact-section {
+          border-radius: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <!-- HERO BLOCK -->
+    <section class="hero-bg pb-5 pt-4 px-2 px-sm-4">
+      <div class="container-lg">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-1 order-2 text-center text-lg-start">
+            <h1 class="display-4 fw-bold mb-3 brand-green">Food Construct</h1>
+            <p class="fs-4 mb-4">
+              <span class="brand-orange"
+                >Суперяркий онлайн-ланч-конструктор</span
+              ><br />
+              <span class="text-muted"
+                >Выбери своё идеальное комбо — собери ланч мечты за 1 минуту.<br />
+                Только лучшие ингредиенты и уют сервиса!</span
+              >
+            </p>
+            <a href="make_order.html" class="btn btn-orange shadow-lg mt-3"
+              >Начать собирать ланч →</a
+            >
+          </div>
+          <div
+            class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0 d-flex justify-content-center"
+          >
+            <img
+              src="./img/casa-s-krem-supom-vid-sverhu.jpg"
+              alt="Герой сайта: аппетитный суп"
+              class="img-fluid rounded-circle shadow"
+              style="max-height: 340px; object-fit: cover; margin-top: 80px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-5">
+      <div class="container-lg">
+        <h2 class="mb-4 fw-bold text-center brand-orange">
+          Почему выбирают нас?
+        </h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-card bg-white px-4 py-4 text-center h-100">
+              <div class="features-icon brand-orange"><span>🥗</span></div>
+              <h5 class="fw-semibold mb-2">Индивидуальный выбор</h5>
+              <p class="mb-1 text-muted">
+                Каждый обед собирается лично под тебя.<br />Никаких шаблонов —
+                только свобода выбора!
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-card bg-white px-4 py-4 text-center h-100">
+              <div class="features-icon"><span>⚡</span></div>
+              <h5 class="fw-semibold mb-2">Супербыстрая доставка</h5>
+              <p class="mb-1 text-muted">
+                Доставим обед горячим<br />за 30 минут в любой район Москвы!
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-card bg-white px-4 py-4 text-center h-100">
+              <div class="features-icon" style="color: #2faaca">
+                <span>⭐</span>
+              </div>
+              <h5 class="fw-semibold mb-2">Только баланс вкуса</h5>
+              <p class="mb-1 text-muted">
+                Меню от лучших шефов.<br />Всегда свежие и полезные продукты!
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-card bg-white px-4 py-4 text-center h-100">
+              <div class="features-icon" style="color: #a350ff">
+                <span>💬</span>
+              </div>
+              <h5 class="fw-semibold mb-2">Техподдержка 24/7</h5>
+              <p class="mb-1 text-muted">
+                Моментальная помощь в чате,<br />звонок, e-mail: всегда на связи
+                для клиента!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA (Call to action) -->
+    <section class="py-4 px-1">
+      <div class="container-lg">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            <div class="cta-section p-5 p-sm-4 text-center">
+              <h2 class="fw-bold mb-3 brand-green">Готов к яркой еде?</h2>
+              <p class="mb-4 fs-5">
+                Собери свой идеальный ланч — выбери суп, основное блюдо, закуску
+                и напиток.<br />
+                <span class="brand-orange fw-bolder"
+                  >Акция: доставка бесплатно!</span
+                >
+              </p>
+              <a
+                href="make_lunch.html"
+                class="btn btn-orange btn-lg px-5 shadow"
+                >Собрать ланч сейчас</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK & CONTACTS -->
+    <section class="contact-section container-lg mt-5 mb-3">
+      <div class="row g-5">
+        <div class="col-12 col-lg-6">
+          <h4 class="fw-bold mb-3 brand-orange">Связаться с нами</h4>
+          <p class="mb-1">
+            <b>Food Construct</b><br />г. Москва, Ланч-центр, ул. Вкусная, д.
+            101
+          </p>
+          <p class="mb-0">
+            <span class="fw-semibold">Телефон:</span>
+            <a href="tel:+70000000000" class="brand-orange text-decoration-none"
+              >+7-000-000-00-00</a
+            >
+          </p>
+          <p class="mb-1">
+            <span class="fw-semibold">E-mail:</span>
+            <a
+              href="mailto:hello@foodconstruct.ru"
+              class="brand-green text-decoration-none"
+              >hello@foodconstruct.ru</a
+            >
+          </p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h4 class="fw-bold mb-3 brand-green">Обратная связь</h4>
+          <form>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Ваше имя"
+                  required
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <input
+                  type="email"
+                  class="form-control form-control-lg"
+                  placeholder="E-mail"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-3 mt-3">
+              <textarea
+                class="form-control form-control-lg"
+                placeholder="Ваш комментарий или вопрос"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-orange mt-2">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer text-center">
+      <span>© 2025 Food Construct. Доставка ланчей в Москве.</span>
+    </footer>
+    <script src="burger-menu.js"></script>
+  </body>
+</html>
